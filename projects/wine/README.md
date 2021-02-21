@@ -1,4 +1,4 @@
-#WINE
+# WINE
 
 ## Pet Project 
 Design was colmleted for educational purposes in the «UX/UI» course.
