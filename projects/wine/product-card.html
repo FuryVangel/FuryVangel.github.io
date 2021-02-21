@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Фанагория</title>
+  <meta name="developer" content="Ангелина Игнатенко | https://github.com/FuryVangel">
+  <meta name="title" content="Винодельня «Фанагория»">
+  <meta name="description" content="«Фанагория» — одна из крупнейших виноделен России. Здесь выращивают и перерабатывают виноград, производят крепкий алкоголь, тихие и игристые вина.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#903b57">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Fanagoria">
+  <meta name="application-name" content="Fanagoria">
+  <meta name="msapplication-TileColor" content="#e9e9d8">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#e9e9d8">
+
+  <link rel="preload" href="fonts/MontserratLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoSlabRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="control-next" viewBox="0 0 155 5">
+  <path d="M590,2726v-1H739.038l-3.974-2,9.936,2.5-9.936,2.5,3.974-2H590Z" transform="translate(-590 -2723)"></path>
+</symbol><symbol id="control-prev" viewBox="0 0 52 7">
+  <path d="M554,2725v1H508.054l2.7,2L504,2725.5l6.757-2.5-2.7,2H554Z" transform="translate(-503 -2722)"></path>
+</symbol><symbol id="icon-facebook" viewBox="0 0 31 31">
+  <path d="M962.916,3644.91h-2.583v2.59h2.583v7.75h3.875v-7.75h2.352l0.232-2.59h-2.584v-1.07c0-.62.124-0.86,0.721-0.86h1.863v-3.23h-3.106c-2.322,0-3.353,1.02-3.353,2.98v2.18ZM965.5,3632a15.5,15.5,0,1,0,15.5,15.5A15.5,15.5,0,0,0,965.5,3632Zm0,2.58a12.915,12.915,0,1,1-12.917,12.92A12.935,12.935,0,0,1,965.5,3634.58Z" transform="translate(-950 -3632)"></path>
+</symbol><symbol id="icon-instagram" viewBox="0 0 31 31">
+  <path d="M1063.31,3645.69a0.6,0.6,0,0,1-.59.59h-1.41a0.591,0.591,0,0,1-.59-0.59v-1.41a0.585,0.585,0,0,1,.59-0.59h1.41a0.591,0.591,0,0,1,.59.59v1.41Zm0,9.02a0.6,0.6,0,0,1-.59.6h-10.44a0.593,0.593,0,0,1-.59-0.6v-6.5h1.22a6.189,6.189,0,0,0-.13.62,4.913,4.913,0,0,0-.05.67,4.77,4.77,0,0,0,9.54,0,4.913,4.913,0,0,0-.05-0.67,6.189,6.189,0,0,0-.13-0.62h1.22v6.5Zm-5.81-8.19a2.98,2.98,0,1,1-2.98,2.98A2.975,2.975,0,0,1,1057.5,3646.52Zm5.96-4.77h-11.92a1.788,1.788,0,0,0-1.79,1.79v11.92a1.788,1.788,0,0,0,1.79,1.79h11.92a1.788,1.788,0,0,0,1.79-1.79v-11.92A1.788,1.788,0,0,0,1063.46,3641.75Zm-5.96-7.75a15.5,15.5,0,1,0,15.5,15.5A15.5,15.5,0,0,0,1057.5,3634Zm0,2.58a12.915,12.915,0,1,1-12.92,12.92A12.94,12.94,0,0,1,1057.5,3636.58Z" transform="translate(-1042 -3634)"></path>
+</symbol><symbol id="icon-telegram" viewBox="0 0 31 31">
+  <path d="M1149.5,3634a15.5,15.5,0,1,0,15.5,15.5A15.5,15.5,0,0,0,1149.5,3634Zm0,2.58a12.915,12.915,0,1,1-12.92,12.92A12.94,12.94,0,0,1,1149.5,3636.58Zm3.48,19.23a0.749,0.749,0,0,0,1.18-.45c0.56-2.63,1.92-9.31,2.43-11.71a0.5,0.5,0,0,0-.16-0.49,0.543,0.543,0,0,0-.52-0.09c-2.71,1-11.05,4.13-14.46,5.39a0.556,0.556,0,0,0-.35.52,0.535,0.535,0,0,0,.39.49c1.53,0.46,3.53,1.1,3.53,1.1s0.94,2.83,1.43,4.27a0.558,0.558,0,0,0,.91.24c0.79-.74,2-1.89,2-1.89S1151.67,3654.88,1152.98,3655.81Zm-7.11-5.6,1.08,3.58,0.24-2.27s4.19-3.78,6.58-5.93a0.173,0.173,0,0,0,.02-0.24,0.177,0.177,0,0,0-.24-0.05Z" transform="translate(-1134 -3634)"></path>
+</symbol><symbol id="icon-twitter" viewBox="0 0 31 31">
+  <path d="M1019.9,3643.34a6.609,6.609,0,0,1-1.83.5,3.221,3.221,0,0,0,1.4-1.76,6.5,6.5,0,0,1-2.02.77,3.18,3.18,0,0,0-5.42,2.9,9.05,9.05,0,0,1-6.56-3.32,3.176,3.176,0,0,0,.99,4.24,3.189,3.189,0,0,1-1.44-.39,3.165,3.165,0,0,0,2.55,3.15,3.161,3.161,0,0,1-1.44.06,3.2,3.2,0,0,0,2.97,2.21,6.4,6.4,0,0,1-4.7,1.31,8.893,8.893,0,0,0,4.87,1.43,8.989,8.989,0,0,0,9.04-9.46A6.7,6.7,0,0,0,1019.9,3643.34Zm-8.4-11.34a15.5,15.5,0,1,0,15.5,15.5A15.5,15.5,0,0,0,1011.5,3632Zm0,2.58a12.915,12.915,0,1,1-12.917,12.92A12.94,12.94,0,0,1,1011.5,3634.58Z" transform="translate(-996 -3632)"></path>
+</symbol><symbol id="icon-vk" viewBox="0 0 31 31">
+  <path d="M1104.25,3654.66a0.521,0.521,0,0,0,.55-0.59c-0.02-1.24.46-1.91,1.33-1.04,0.96,0.97,1.16,1.63,2.33,1.63h2.06c0.52,0,.73-0.17.73-0.43,0-.56-0.92-1.54-1.7-2.26-1.09-1.02-1.13-1.04-.2-2.26,1.17-1.51,2.69-3.44,1.34-3.44h-2.57c-0.5,0-.53.28-0.71,0.7-0.64,1.51-1.87,3.48-2.33,3.18-0.49-.32-0.26-1.56-0.23-3.4a0.79,0.79,0,0,0-.73-1,5.443,5.443,0,0,0-1.17-.13c-1.47,0-2.48.62-1.91,0.73,1.02,0.18.92,2.38,0.68,3.33-0.41,1.65-1.96-1.31-2.6-2.78a0.708,0.708,0,0,0-.76-0.63h-2.1c-0.32,0-.51.1-0.51,0.33a22.356,22.356,0,0,0,3.73,6.31A5.51,5.51,0,0,0,1104.25,3654.66ZM1103.5,3634a15.5,15.5,0,1,0,15.5,15.5A15.5,15.5,0,0,0,1103.5,3634Zm0,2.58a12.915,12.915,0,1,1-12.92,12.92A12.94,12.94,0,0,1,1103.5,3636.58Z" transform="translate(-1088 -3634)"></path>
+</symbol></svg>
+</div>
+<div class="page-wrapper">
+  <header class="page-header page-header--product">
+    <nav class="page-header__nav container">
+      <a href="index.html" class="page-header__logo" aria-label="Перейти на главную страницу компании Фанагория">
+        <picture>
+          <source srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x" type="image/webp">
+
+          <img src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" width="444" height="257" alt="Логотип компании Фанагория">
+        </picture>
+      </a>
+      <div class="page-header__toggler js-menu-toggler" role="button" aria-label="Управление мобильным меню">
+        <span></span>
+      </div>
+      <nav class="page-header__menu js-menu">
+        <ul class="page-header__list">
+          <li><a class="page-header__link page-header__link--product underline" href="#!">О нас</a></li>
+          <li><a class="page-header__link page-header__link--product underline" href="#!">Вино</a></li>
+          <li><a class="page-header__link page-header__link--product underline" href="#!">Игристое</a></li>
+          <li><a class="page-header__link page-header__link--product underline" href="#!">Крепкие напитки</a></li>
+          <li><a class="page-header__link page-header__link--product underline" href="#!">Экскурсии</a></li>
+          <li><a class="page-header__link page-header__link--product page-header__link--lang underline" href="#!">EN</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+  <main>
+    <section class="product">
+      <div class="product__content container">
+        <div class="product__card product-card">
+          <ul class="product-card__menu">
+            <li class="product-card__menu-item underline js-card-trigger" data-tab="1">Саперави</li>
+            <li class="product-card__menu-item underline js-card-trigger" data-tab="2">Мускат</li>
+            <li class="product-card__menu-item underline js-card-trigger" data-tab="3">Портвейн</li>
+            <li class="product-card__menu-item underline js-card-trigger" data-tab="4">Шардоне</li>
+            <li class="product-card__menu-item underline js-card-trigger active" data-tab="5">Каберне</li>
+            <li class="product-card__menu-item underline js-card-trigger" data-tab="6">Кагор</li>
+          </ul>
+          <ul class="product-card__info">
+            <li class="product-card__info-item js-card-info" data-tab="1">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__saperavi.webp 1x, img/vintage__saperavi@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__saperavi.png" srcset="img/vintage__saperavi.png 1x, img/vintage__saperavi@2x.png 2x" width="254" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда саперави">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Саперави</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Красное сухое выдержанное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Саперави</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>13,5%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>> 12 месяцев</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда саперави">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>В букете – развитые тона выдержки с оттенками чернослива, терна, шоколада и ванили. Вкус экстрактивный, бархатистый, свежий с&nbsp;интенсивным фруктовым послевкусием.</p>
+                    </div>
+                    <div>
+                      <h4>Рекомендуемая температура подачи:</h4>
+                      <p>16 — 18 °С</p>
+                    </div>
+                    <div>
+                      <h4>Важно!</h4>
+                      <p>В переводе с грузинского языка «саперави» — это &laquo;<strong>красильщик</strong>&raquo;, &laquo;<strong>краска</strong>&raquo;, &laquo;<strong>придающий цвет</strong>&raquo;, т. к. ягода этого сорта содержит большое количество антоцианов (красящего вещества). Окрашивание бокала и полости рта – закономерный результат дегустации вин из этого сорта.</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2018</strong></span>
+                          <span>Золотая медаль в категории красных тихих вин свыше 700 руб на потребительском дегустационном конкурсе VII Черноморского форума виноделия «Выбор покупателя», Москва, 2020 год</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>1 место в категории красных вин на конкурсе «Кубок СПбШС», Санкт-Петербург, 2018</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>Серебряная медаль на XX дегустационном конкурсе международной ярмарки «Продэкспо», Москва, 2018 год</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Алиса</h4>
+                        <p>винный энтузиаст</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Очень удивил своим сложным ароматом, насыщенным цветом и богатым вкусом. Просто&nbsp;великолепно! Хочется ещё и ещё!</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Сергей Макаров</h4>
+                        <p>винный блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Посетив стенд «Фанагории» на «Продэкспо – 2018» и попробовав там несколько интересовавших меня вин, тем же вечером не поленился и доехал до их фирменного магазина. Вино очаровывает своей ягодной джемовостью и ноткой шоколада. Вкус мягкий, бархатистый с гармоничной кислотностью. Одно из тех вин, что «на подумать».</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card__info-item js-card-info" data-tab="2">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__muscat.webp 1x, img/vintage__muscat@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__muscat.png" srcset="img/vintage__muscat.png 1x, img/vintage__muscat@2x.png 2x" width="212" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда мускат">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Мускат</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Белое ликерное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Мускат</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>17%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>2 года</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда мускат">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>В букете развиты тона выдержки в дубовой бочке, мускатно-цитронные и&nbsp;цветочно-медовые оттенки, тона полевых трав и цветов. Вкус вина мягкий, округлый с длительным мускатным послевкусием.</p>
+                    </div>
+                    <div>
+                      <h4>Особенности винификации:</h4>
+                      <p>Вино золотисто-янтарного цвета из винограда сорта «мускат оттонель», выращенного на фанагорийских виноградниках таманского полуострова. Выдержано в дубовых бочках 2 года.</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>Уровень «золото» в Авторском гиде Артура Саркисяна за 2018 год</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Эмилия Денисова</h4>
+                        <p>винный энтузиаст</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Вкус у вина "густой", насыщенный, с нотками полевых трав и цветов. Немного медовый за счет сладости. А еще у этого вина роскошный сладковатый аромат. Даже в пасмурный день он&nbsp;поднимает настроение.</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Данила Бодров</h4>
+                        <p>винный блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>А запах какой великолепный! Вы не представляете, как пахнет ферментированный виноград сорта «мускат»! Букет ароматов хорошо сбалансирован, никакого намека на химию, всё&nbsp;натурально, чувствуется глубокая насыщенность нежными цветочными и фруктовыми тонами. Холодным зимним вечером теплота этого солнечного вина ощущается наиболее ярко. Настроение улучшилось, а глаза заблестели. Спасибо, Фанагория. Послевкусие длительное. С&nbsp;выдохом ощущаешь во рту запах душистых медовых яблок, и понимаешь, что не зря потратил несчастные 550 рублей.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card__info-item js-card-info" data-tab="3">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__portwine.webp 1x, img/vintage__portwine@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__portwine.png" srcset="img/vintage__portwine.png 1x, img/vintage__portwine@2x.png 2x" width="212" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда каберне совиньон, саперави">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Портвейн</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Красное ликерное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Каберне совиньон, саперави</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>187мл, 750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>18%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>> 2 лет</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда каберне совиньон, саперави">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>Темно-рубинового цвета с терракотовым оттенком. Аромат яркий, богатый с&nbsp;тоном увяленных черных фруктов и ягод: чернослива, вишни, черники, голубики, брусники, терна; оттенки древесины дуба, ванили, черного шоколада, корочки ржаного хлеба и кедрового ореха. Вкус экстрактивный, полный, хорошо сбалансированный, повторяются ноты аромата с&nbsp;длительным шоколадно-ягодным послевкусием.</p>
+                    </div>
+                    <div>
+                      <h4>Гастрономические сочетания:</h4>
+                      <p>Голубые сыры, шоколадный мусс, выпечка с красными ягодами, увяленные красные ягоды, чернослив.</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>Золотая медаль на дегустационном конкурсе «Кубок СВВР – 2018»</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Амелия Савина</h4>
+                        <p>винный блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Аромат средней интенсивности+, свежесваренное варенье из красных ягод, увяленные вишня и&nbsp;черная смородина, виноградные гребни, ваниль, черный шоколад. Вкус мощный, яркий, суперский с мощными танинами, тоном ржаной корочки, дуба, увяленных черных ягод, шоколада, варенья из&nbsp;черной смородины, черноплодки и вишни в обрамлении перечных нот. Послевкусие длительное, заварка черного чая, ржаная корочка, увяленные ягоды. Отличный олдскульный советский портвейн, когда все на своем месте.</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Семён Семёныч</h4>
+                        <p>блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Вкус черной смородины и корочки ржаного хлеба – первое, что чувствуется, когда еще только вдыхаешь аромат это напитка. Уже потом, пробуя и смакуя портвейн, начинаешь ощущать вкусы вишни, чернослива. Несмотря на то, что это ликерное вино, оно совсем не сладкое. Присутствует легкая терпкость. Ну а в послевкусии ощущаются нотки вяленых фруктов.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card__info-item js-card-info" data-tab="4">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__chardonnay.webp 1x, img/vintage__chardonnay@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__chardonnay.png" srcset="img/vintage__chardonnay.png 1x, img/vintage__chardonnay@2x.png 2x" width="250" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда шардоне">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Шардоне</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Белое сухое <br> выдержанное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Шардоне</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>13,5%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>> 12 месяцев</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда шардоне">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>Вино соломенного цвета. В букете гармонично сочетаются тона спелых фруктов, цитрусов и цветов с благородными сливочными оттенками. Вкус&nbsp;полный, гармоничный, с хорошим уровнем кислотности, минеральными, фруктово-цитрусовыми оттенками и легкими древесными нюансами. Послевкусие длительное, сливочно-фруктовое с переливами цветочных и&nbsp;цитрусовых нот.</p>
+                    </div>
+                    <div>
+                      <h4>Особенности винификации:</h4>
+                      <p>Создано из классического сорта винограда «шардоне», выращенного в&nbsp;лучших зонах фанагорийских виноградников Таманского полуострова с&nbsp;урожайностью не более 60 ц/га. Для выращивания винограда используются самые передовые агротехнические мероприятия, урожай собирают исключительно вручную в&nbsp;момент, когда ягоды достигают оптимальной степени зрелости. Винификация включает в&nbsp;себя деликатную ферментацию в нержавеющих емкостях при контролируемой температуре, выдержку во&nbsp;французских дубовых бочках не менее 12 месяцев и&nbsp;бутылочную выдержку не менее 6 месяцев.</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2016</strong></span>
+                          <span>Серебряная медаль в категории белых тихих вин свыше 700 руб. на потребительском дегустационном конкурсе VII Черноморского форума виноделия «Выбор покупателя», Москва, 2020 год</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>Золотая медаль «ВЧМ 2017» в категории белых вин урожая 2015 года и младше</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>1 место в категории белых вин на конкурсе «Кубок СПбШС», Санкт-Петербург, 2018</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Элла Кацнеленбоген</h4>
+                        <p>винный эксперт</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Очень многие прекрасно знают мое скептическое отношение к нашему виноделию... Ребята! «Шардоне» винтажный прям выстрелил! Очень интеллигентное вино! Для лета - это крутяк!</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Володя Шарапов</h4>
+                        <p>винный энтузиаст</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Светло-лимонного цвета с янтарно-золотистым оттенком, блестящее. Нежные цветы и робкие нотки кремния. Последние по мере аэрации обретают уверенное лидерство в окружении цитрусовой свежести. Однако появление в букете нот айвы, яблока и ананаса усиливает фруктовую составляющую и с лёгкостью восстанавливает минерально-фруктовое равновесие. В&nbsp;качестве обрамления – резная древесность со штрихами дыма и миндаля. Среднетелое со&nbsp;смещением к полному вино с хорошим балансом освежающей кислотности и согревающей крепости. Вино проявляет во рту маслянистость, которая взаимодействует с хрустящей кислотностью, перерастающей в минеральность. Послевкусие длительное, повторяющее оттенки вкуса с горьковато-солоноватым окончанием. Сдержанное, элегантное, с хорошей структурой вино.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card__info-item js-card-info active" data-tab="5">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__cabernet.webp 1x, img/vintage__cabernet@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__cabernet.png" srcset="img/vintage__cabernet.png 1x, img/vintage__cabernet@2x.png 2x" width="209" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда каберне">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Каберне</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                           <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Красное сухое выдержанное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Каберне совиньон</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>12 — 14%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>> 12 месяцев</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда каберне">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>Вино обладает глубоким темно-рубиновым цветом. В сложном букете доминирует аромат специй, ванили на общем фоне «дымки» дубовой бочки. Вкус вина классический, сортовой с оттенками чёрной смородины, табака, чернослива, кожи. Отличная структура и хорошая сбалансированность делают вино необычайно изысканным.</p>
+                    </div>
+                    <div>
+                      <h4>Гастрономические сочетания:</h4>
+                      <p>Блюда из дичи, приготовленное на гриле мясо и мягкие сыры.</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2015</strong></span>
+                          <span>2 место в категории красных вин на конкурсе «Кубок СПбШС», Санкт-Петербург, 2018</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2014</strong></span>
+                          <span>Золотая медаль на XX дегустационном конкурсе международной ярмарки «Продэкспо», Москва, 2018 год</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2014</strong></span>
+                          <span>Золотая медаль «ВЧМ 2017» в категории красных вин урожая 2014 года и старше</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Катя Гималаева</h4>
+                        <p>кавист и винный блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Я как настоящий сноб всегда считала, что «Фанагория» и вкусное вино – слова-антонимы, пока&nbsp;не&nbsp;осталась наедине с «Винтаж Каберне 2014». Его приятная кислотность проникает в центр наслаждения и переносит прямо в бабушкин огород, на стремянку у дерева с вишней :) Оно&nbsp;цвета&nbsp;густого вишневого компота, из которого решили сварить глинтвейн и насыпали специй. Пьем&nbsp;если нет времени съездить в деревню за вишней.</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Андрей Котов</h4>
+                        <p>винный блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Итого: в бокале - вишнево-бурый цвет. И, как это бывает в отличных винах, - букет очень лаконично переходит во вкус. Тут: чернослив, черешня, малина, клубничный джем, корица, тельное, сочное и яркое, хорошо сбалансировано. Потрясающая стилистика, элегантное. Долгое&nbsp;послевкусие, бархатистое. Вау, а не вино! 8+/10.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card__info-item js-card-info" data-tab="6">
+              <div class="product-card__description description">
+                <div class="description__image">
+                  <picture>
+                    <source srcset="img/vintage__kagor.webp 1x, img/vintage__kagor@2x.webp 2x" type="image/webp">
+                    <img src="img/vintage__kagor.png" srcset="img/vintage__kagor.png 1x, img/vintage__kagor@2x.png 2x" width="254" height="800" alt="Бутылка вина коллекции Винтаж сорта винограда каберне совиньон, саперави">
+                  </picture>
+                </div>
+                <div class="description__info">
+                  <h1 class="heading">Коллекция Винтаж</h1>
+                  <h2>Кагор</h2>
+                  <div class="description__rating">
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                    <picture>
+                      <source srcset="img/star.webp 1x, img/star@2x.webp 2x" type="image/webp">
+                      <img src="img/star.png" srcset="img/star.png 1x, img/star@2x.png 2x" width="20" height="19" alt="Звезда">
+                    </picture>
+                  </div>
+                  <div class="description__group">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/glass.webp 1x, img/glass@2x.webp 2x" type="image/webp">
+                            <img class="wineglass" src="img/wineglass.png" srcset="img/glass.png 1x, img/glass@2x.png 2x" width="28" height="61" alt="Иконка бокала вина">
+                          </picture>
+                          <span>Категория</span>
+                        </div>
+                        <p>Ликерное красное <br> выдержанное</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/grapes.webp 1x, img/grapes@2x.webp 2x" type="image/webp">
+                            <img class="grapes" src="img/grapes.png" srcset="img/grapes.png 1x, img/grapes@2x.png 2x" width="61" height="61" alt="Иконка виноградной лозы">
+                          </picture>
+                          <span>Сорт</span>
+                        </div>
+                        <p>Каберне совиньон, саперави</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/pin.webp 1x, img/pin@2x.webp 2x" type="image/webp">
+                            <img class="pin" src="img/pin.png" srcset="img/pin.png 1x, img/pin@2x.png 2x" width="47" height="61" alt="Иконка метки локации">
+                          </picture>
+                          <span>Регион</span>
+                        </div>
+                        <p>Таманский п-ов</p>
+                      </li>
+                    </ul>
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/bottle.webp 1x, img/bottle@2x.webp 2x" type="image/webp">
+                            <img class="bottle" src="img/bottle.png" srcset="img/bottle.png 1x, img/bottle@2x.png 2x" width="23" height="61" alt="Иконка бутылки вина">
+                          </picture>
+                          <span>Объем</span>
+                        </div>
+                        <p>750мл</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/filtering.webp 1x, img/filtering@2x.webp 2x" type="image/webp">
+                            <img class="filtering" src="img/filtering.png" srcset="img/filtering.png 1x, img/filtering@2x.png 2x" width="61" height="61" alt="Иконка дистиллятора">
+                          </picture>
+                          <span>Алкоголь</span>
+                        </div>
+                        <p>16%</p>
+                      </li>
+                      <li class="description__item">
+                        <div>
+                          <picture>
+                            <source srcset="img/barrel.webp 1x, img/barrel@2x.webp 2x" type="image/webp">
+                            <img class="barrel" src="img/barrel.png" srcset="img/barrel.png 1x, img/barrel@2x.png 2x" width="51" height="61" alt="Иконка винной бочки">
+                          </picture>
+                          <span>Срок <br> выдержки</span>
+                        </div>
+                        <p>> 2 лет</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <a class="product-card__btn btn btn--common" href="#!" aria-label="Где купить бутылку вина коллекции Винтаж сорта винограда каберне совиньон, саперави">
+                    <svg width="295" height="65">
+                      <rect x="5" y="5" rx="27" fill="none" stroke="#903b57" width="185" height="55"></rect>
+                    </svg>
+                    <span>Где купить</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-card__addition addition">
+                <h3 class="heading line">Дополнительно</h3>
+                <div class="addition__info">
+                  <div class="addition__description">
+                    <div>
+                      <h4>Особенности винификации:</h4>
+                      <p>Создан из винограда сортов «каберне совиньон» и «саперави», выращенных на фанагорийских виноградниках Таманского полуострова при&nbsp;контролируемой урожайности 100 ц/га. Приготовлен по классической технологии – спиртованием сусла на мезге и последующей выдержкой в&nbsp;новых и «годовых» бочках из 80-летнего кавказского дуба не менее 2-х лет. Для спиртования сусла использовался собственный виноградный спирт, произведенный специально для ликерных вин в коньячном цехе.</p>
+                    </div>
+                    <div>
+                      <h4>Сенсорные характеристики:</h4>
+                      <p>Темно-рубиновый цвет с терракотовым оттенком. Аромат комплексный с&nbsp;нотами увяленных черных фруктов и ягод: чернослива, вишни, черники, голубики, терна, черноплодной рябины; оттенки древесины дуба, ванили, черного шоколада, корочки ржаного хлеба. Вкус вина экстрактивный, полный со сбалансированой кислотностью, с джемовыми нотами, соответствует аромату. Послевкусие длительное с оттенками чернослива и&nbsp;шоколада.</p>
+                    </div>
+                    <div>
+                      <h4>Гастрономические сочетания:</h4>
+                      <p>голубые сыры, а также бри, камамбер, горький шоколад (выше 65 %), шоколадный десерт, выпечка с красными ягодами и шоколадом, увяленные красные ягоды, чернослив, инжир.</p>
+                    </div>
+                    <div>
+                      <h4>Рекомендуемая температура подачи:</h4>
+                      <p>14 — 16 °С</p>
+                    </div>
+                  </div>
+                  <div class="addition__reward">
+                    <ul>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span><strong>Винтаж 2011</strong></span>
+                          <span>Золотая медаль AWC Vienna 2016, звание «лучшее в категории крепких вин»</span>
+                        </p>
+                      </li>
+                      <li>
+                        <picture>
+                          <source srcset="img/medal.webp 1x, img/medal@2x.webp 2x" type="image/webp">
+                          <img src="img/medal.png" srcset="img/medal.png 1x, img/medal@2x.png 2x" width="38" height="59" alt="Медаль">
+                        </picture>
+                        <p>
+                          <span>Серебряная медаль AWC Vienna 2018</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__feedback feedback">
+                <h3 class="heading line">Отзывы</h3>
+                <div class="feedback-slider slider swiper-container js-feedback-slider">
+                  <div class="swiper-wrapper">
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img.webp 1x, img/feedback-img@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img.png" srcset="img/feedback-img.png 1x, img/feedback-img@2x.png 2x" width="138" height="138" alt="Катя Гималаева, кавист и винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Елизавета Орлова</h4>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Аромат плотный, гладкий, подсушенные черные ягоды, сироп из черноплодки, сырно-молочные тона. Вкус с удивительно высокой кислотностью, тонами черемухи, черноплодки, чернослива; напомнило еще греческое варенье из помидор. Послевкусие средней продолжительности+, чернослив и черноплодка. Очень вкусно, гармонично, мягко, сглаженно, не приторно.</p>
+                      </div>
+                    </div>
+                    <div class="feedback-slider__item swiper-slide">
+                      <div class="feedback-slider__avatar">
+                        <div class="feedback-slider__image">
+                          <picture>
+                            <source srcset="img/feedback-img_1.webp 1x, img/feedback-img_1@2x.webp 2x" type="image/webp">
+                            <img src="img/feedback-img_1.png" srcset="img/feedback-img_1.png 1x, img/feedback-img_1@2x.png 2x" width="557" height="643" alt="Андрей Котов, винный блоггер">
+                          </picture>
+                        </div>
+                        <h4>Родион Рачков</h4>
+                        <p>блогер</p>
+                      </div>
+                      <div class="feedback-slider__text">
+                        <p>Прекрасный кагор, один из лучших за последние годы!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-slider__controls slider__controls">
+                    <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущий слайд">
+                      <svg width="52" height="7" viewBox="0 0 52 7">
+                        <use xlink:href="#control-prev"></use>
+                      </svg>
+                    </button>
+                    <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующий слайд">
+                      <svg width="155" height="5" viewBox="0 0 155 5">
+                        <use xlink:href="#control-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__content container">
+      <div class="page-footer__body">
+        <div class="page-footer__logo-container">
+          <a href="index.html" class="page-footer__logo" aria-label="Перейти на главную страницу компании Фанагория">
+            <picture>
+              <source srcset="img/logo-footer.webp 1x, img/logo-footer@2x.webp 2x" media="(min-width: 1024px)" type="image/webp">
+              <source srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="img/logo-footer.png 1x, img/logo-footer@2x.png 2x" media="(min-width: 1024px)" type="image/png">
+
+              <img src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" width="444" height="257" alt="Логотип компании Фанагория">
+            </picture>
+          </a>
+          <p>&copy; 2021 ОАО АПФ &laquo;Фанагория&raquo;</p>
+          <p>Политика конфиденциальности</p>
+        </div>
+        <div class="page-footer__block-group" role="navigation" aria-label="Меню навигации">
+          <div class="page-footer__item">
+            <ul class="page-footer__list">
+              <li><a class="page-footer__link underline" href="#!">О нас</a></li>
+              <li><a class="page-footer__link underline" href="#!">Вино</a></li>
+              <li><a class="page-footer__link underline" href="#!">Игристое</a></li>
+              <li><a class="page-footer__link underline" href="#!">Крепкие напитки</a></li>
+              <li><a class="page-footer__link underline" href="#!">Экскурсии</a></li>
+            </ul>
+          </div>
+          <div class="page-footer__item">
+            <ul class="page-footer__list">
+              <li><a class="page-footer__link underline" href="#!">Новости</a></li>
+              <li><a class="page-footer__link underline" href="#!">Журнал</a></li>
+              <li><a class="page-footer__link underline" href="#!">Блоги</a></li>
+              <li><a class="page-footer__link underline" href="#!">Рестораны</a></li>
+              <li><a class="page-footer__link underline" href="#!">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="page-footer__item page-footer__item--contacts">
+            <div class="page-footer__contacts">
+              <p class="text">Адрес: Россия, 353540, Краснодарский&nbsp;край, Темрюкский р-н, п. Сенной, ул. Мира, 49</p>
+              <p class="text">Офис компании: <a class="underline" href="tel:+78614838747">+7 86148 38747</a></p>
+            </div>
+            <ul class="page-footer__socials">
+              <li>
+                <a href="#!" aria-label="Мы на Facebook">
+                  <svg class="page-footer__icon" width="33" height="33" viewBox="0 0 33 33">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="Мы в Twitter">
+                  <svg class="page-footer__icon" width="33" height="33" viewBox="0 0 33 33">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="Мы в Instagram">
+                  <svg class="page-footer__icon" width="33" height="33" viewBox="0 0 33 33">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="Мы ВКонтакте">
+                  <svg class="page-footer__icon" width="33" height="33" viewBox="0 0 33 33">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" aria-label="Мы в Telegram">
+                  <svg class="page-footer__icon" width="33" height="33" viewBox="0 0 33 33">
+                    <use xlink:href="#icon-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
