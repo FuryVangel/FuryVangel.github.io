@@ -609,46 +609,6 @@ svg {
   100% {
     text-shadow: 0.025em 0.025em 0 rgba(239, 239, 239, 0.75), -0.025em 0 0 rgba(170, 68, 68, 0.75); } }
 
-@-webkit-keyframes origin {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 0; }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; } }
-
-@keyframes origin {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 0; }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; } }
-
-@-webkit-keyframes origin-scale {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@keyframes origin-scale {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     -webkit-animation-delay: -1ms !important;
@@ -1256,35 +1216,55 @@ svg {
     padding-top: 2em;
     padding-bottom: 2em; }
 
+/* progressive image CSS */
 .progressive {
   position: relative;
   display: block;
-  overflow: hidden; }
-  .progressive img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border: 0 none; }
-    .progressive img.preview {
-      -webkit-filter: blur(2vw);
-              filter: blur(2vw);
-      -webkit-transform: scale(1.05);
-              transform: scale(1.05); }
-    .progressive img.hide {
-      opacity: 0; }
-    .progressive img.origin {
-      position: absolute;
-      left: 0;
-      top: 0;
-      -webkit-animation: origin 1.5s ease-out;
-              animation: origin 1.5s ease-out; }
-    .progressive img.origin-scale {
-      position: absolute;
-      left: 0;
-      top: 0;
-      -webkit-animation: origin-scale 1s ease-out;
-              animation: origin-scale 1s ease-out; }
+  overflow: hidden;
+  outline: none;
+  -webkit-transition: none;
+  transition: none; }
+
+.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none; }
+
+.progressive img.preview {
+  -webkit-filter: blur(2vw);
+          filter: blur(2vw);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
+
+.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  -webkit-animation: progressiveReveal 1s ease-out;
+          animation: progressiveReveal 1s ease-out; }
+
+@-webkit-keyframes progressiveReveal {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes progressiveReveal {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
 
 .grid {
   display: grid;
