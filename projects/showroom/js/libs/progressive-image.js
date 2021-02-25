@@ -1,6 +1,6 @@
 // progressive-image.js
 // by Craig Buckler, @craigbuckler
-if (window.addEventListener) window.addEventListener('load', function() {
+if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
 
   'use strict';
 
@@ -94,7 +94,7 @@ if (window.addEventListener) window.addEventListener('load', function() {
     // load failure retry
     retry = 1 + (retry || 0);
     if (retry < 3) img.onerror = function() {
-      setTimeout(function() { loadFullImage(item, retry); }, retry * 3000);
+      setTimeout(function() { loadFullImage(item, retry); }, retry * 1500);
     };
 
     img.src = href;
