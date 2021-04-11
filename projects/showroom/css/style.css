@@ -409,7 +409,8 @@ body {
 main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+          flex: 1 0 auto;
+  overflow: hidden; }
 
 img {
   display: block;
@@ -429,6 +430,10 @@ a {
     outline: var(--color-orange) auto 0.5px; }
   a:active {
     opacity: 0.8; }
+
+a[data-no-click="true"] {
+  cursor: default;
+  pointer-events: none; }
 
 input,
 button,
@@ -1072,7 +1077,7 @@ svg {
 
 .breadcrumbs {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem;
   text-align: center;
   color: var(--lightShadow);
@@ -1127,9 +1132,6 @@ svg {
       margin-right: 15px; }
     .breadcrumbs__item a:hover, .breadcrumbs__item a:focus {
       color: var(--color-orange); }
-    .breadcrumbs__item a[data-no-click="true"] {
-      cursor: default;
-      pointer-events: none; }
 
 .subscribe__content {
   display: -webkit-box;
@@ -1431,7 +1433,7 @@ svg {
       padding: 0;
       margin: 0;
       list-style: none; }
-    .page-footer__pay-links p {
+    .page-footer__pay-links > p {
       font-size: 1rem;
       font-weight: 500;
       padding-bottom: 0.5em; }
